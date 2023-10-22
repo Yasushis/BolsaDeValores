@@ -1,8 +1,8 @@
 # BolsaDeValores
-Simulação de uma bolsa de valores
+A partir deste projeto, será possível simular interações em uma bolsa de valores, envolvendo investidores, empresas e corretoras.
 
-# Sobre o projeto
-- A carteira armazena todos os ativos da Bolsa de Valores em forma de lista
+# Static Array
+Um diferencial do projeto é a utilização de um static array que substitui o array tradicional, possuindo algumas funcionalidades diferentes
 
 # Ambientes usados
 Java (IntelliJ IDEA)
