@@ -8,6 +8,6 @@ Simulação de uma bolsa de valores
 Java (IntelliJ IDEA)
 
 # Autores
-Joel Sasaki
-Vinícius Miura
+Joel Sasaki  
+Vinícius Miura  
 Leandro Takara
