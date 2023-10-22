@@ -9,6 +9,7 @@ Java (IntelliJ IDEA)
 
 # Equipe desenvolvedora
 *FRIED LIVER*
+
 -Joel Sasaki  
 -Vinícius Miura  
 -Leandro Takara
