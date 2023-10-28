@@ -1,22 +1,16 @@
 package bolsaDeValores;
 
-import estruturadados.StaticArray;
+import estruturadados.DynamicArray;
 
 public class Investidor {
     private String nome;
-    private StaticArray<Ativo> ativos;
+    private DynamicArray<Ativo> ativos;
     private float dinheiro;
 
     public Investidor(String nome, float dinheiro) {
         this.nome = nome;
         this.dinheiro = dinheiro;
-        this.ativos = new StaticArray<>(0);
-    }
-
-    private void resizeAtivos(int newCapacity) {
-        StaticArray<Ativo> temp = new StaticArray<>(newCapacity);
-        ativos.forEach(ativo -> temp.add(ativo));
-        ativos = temp;
+        this.ativos = new DynamicArray<>(0);
     }
 
     public String getNome() {
@@ -27,11 +21,11 @@ public class Investidor {
         this.nome = nome;
     }
 
-    public StaticArray<Ativo> getAtivos() {
+    public DynamicArray<Ativo> getAtivos() {
         return ativos;
     }
 
-    public void setAtivos(StaticArray<Ativo> ativos) {
+    public void setAtivos(DynamicArray<Ativo> ativos) {
         this.ativos = Investidor.this.ativos;
     }
 
@@ -53,9 +47,6 @@ public class Investidor {
 
         // compra do ativo
         dinheiro -= (ativo.getValor() * (1 + corretora.getCorretagem())) * quantidade;
-
-        if (ativos.getSize() + quantidade > ativos.getCapacity())
-            this.resizeAtivos(ativos.getCapacity() + quantidade + 10);
 
         for (int i = 0; i < quantidade; i++) {
             ativos.add(ativo);

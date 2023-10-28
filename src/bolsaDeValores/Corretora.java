@@ -1,7 +1,5 @@
 package bolsaDeValores;
 
-import estruturadados.StaticArray;
-
 public class Corretora {
     private float corretagem;
 

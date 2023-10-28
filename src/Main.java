@@ -1,6 +1,7 @@
 import bolsaDeValores.Acao;
 import bolsaDeValores.Corretora;
 import bolsaDeValores.Investidor;
+import estruturadados.DynamicArray;
 
 public class Main {
     public static void main(String[] args) {
