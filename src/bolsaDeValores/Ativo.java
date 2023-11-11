@@ -1,4 +1,4 @@
-package bolsaDeValores;
+package com.example.bolsadevaloresjavafx.bolsaDeValores;
 
 // super classe para os investimentos
 public abstract class Ativo {

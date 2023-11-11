@@ -1,6 +1,6 @@
-package bolsaDeValores;
+package com.example.bolsadevaloresjavafx.bolsaDeValores;
 
-import estruturadados.DynamicArray;
+import com.example.bolsadevaloresjavafx.estruturadados.DynamicArray;
 
 public class Carteira {
 
@@ -16,5 +16,13 @@ public class Carteira {
 
     public void setAtivos(DynamicArray<Ativo> ativos) {
         this.ativos = ativos;
+    }
+
+    public void add(Ativo ativo) {
+        ativos.add(ativo);
+    }
+
+    public int countAtivos(Ativo ativo) {
+        return ativos.filter(inv -> inv.equals(ativo)).getSize();
     }
 }

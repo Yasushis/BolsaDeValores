@@ -1,4 +1,4 @@
-package bolsaDeValores;
+package com.example.bolsadevaloresjavafx.bolsaDeValores;
 
 // FII sao investimentos que devem ter dividendos
 public class FII extends Ativo {

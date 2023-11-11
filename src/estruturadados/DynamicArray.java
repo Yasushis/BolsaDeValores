@@ -1,4 +1,4 @@
-package estruturadados;
+package com.example.bolsadevaloresjavafx.estruturadados;
 
 import java.util.function.Consumer;
 import java.util.function.Predicate;

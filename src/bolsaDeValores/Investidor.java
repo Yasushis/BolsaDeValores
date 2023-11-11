@@ -1,16 +1,15 @@
-package bolsaDeValores;
+package com.example.bolsadevaloresjavafx.bolsaDeValores;
 
-import estruturadados.DynamicArray;
+import com.example.bolsadevaloresjavafx.estruturadados.DynamicArray;
 
 public class Investidor {
     private String nome;
-    private DynamicArray<Ativo> ativos;
     private float dinheiro;
-
+    private Carteira carteira;
     public Investidor(String nome, float dinheiro) {
         this.nome = nome;
         this.dinheiro = dinheiro;
-        this.ativos = new DynamicArray<>(0);
+        this.carteira = new Carteira();
     }
 
     public String getNome() {
@@ -21,12 +20,12 @@ public class Investidor {
         this.nome = nome;
     }
 
-    public DynamicArray<Ativo> getAtivos() {
-        return ativos;
+    public Carteira getCarteira() {
+        return carteira;
     }
 
-    public void setAtivos(DynamicArray<Ativo> ativos) {
-        this.ativos = Investidor.this.ativos;
+    public void setCarteira(Carteira carteira) {
+        this.carteira = carteira;
     }
 
     public float getDinheiro() {
@@ -49,7 +48,7 @@ public class Investidor {
         dinheiro -= (ativo.getValor() * (1 + corretora.getCorretagem())) * quantidade;
 
         for (int i = 0; i < quantidade; i++) {
-            ativos.add(ativo);
+            carteira.add(ativo);
         }
     }
 
@@ -58,8 +57,8 @@ public class Investidor {
             throw new RuntimeException("Quantidade nao pode ser negativa");
 
         // vefifica se o investidor consegue vender os ativos
-        if (ativos.filter(inv -> inv.equals(ativo)).getSize() < quantidade)
-            throw new RuntimeException("erorr");
+        if (carteira.countAtivos(ativo) < quantidade)
+            throw new RuntimeException("error");
 
         // venda do ativo
         dinheiro += (ativo.getValor() * quantidade) * (1 + ativo.getDividendos());
