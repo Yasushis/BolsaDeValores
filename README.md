@@ -5,7 +5,7 @@ A partir deste projeto, será possível simular interações em uma bolsa de val
 Um diferencial do projeto é a utilização de um dynamic array que substitui o array tradicional, possuindo algumas funcionalidades diferentes.
 
 # Ambientes usados (ferramentas)
-Java (IntelliJ IDEA)
+Java (IntelliJ IDEA), 
 JavaFX
 
 # Interface Gráfica
