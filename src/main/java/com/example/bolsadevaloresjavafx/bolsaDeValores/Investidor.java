@@ -1,14 +1,16 @@
 package com.example.bolsadevaloresjavafx.bolsaDeValores;
 
-import com.example.bolsadevaloresjavafx.estruturadados.DynamicArray;
-
 public class Investidor {
-    private String nome;
-    private float dinheiro;
+    public String nome;
+    public float dinheiro;
     private Carteira carteira;
+
     public Investidor(String nome, float dinheiro) {
         this.nome = nome;
         this.dinheiro = dinheiro;
+    }
+
+    public Investidor() {
         this.carteira = new Carteira();
     }
 

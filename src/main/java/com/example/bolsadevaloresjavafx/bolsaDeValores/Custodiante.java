@@ -1,6 +1,6 @@
 package com.example.bolsadevaloresjavafx.bolsaDeValores;
 
-import com.example.bolsadevaloresjavafx.estruturadados.DynamicArray;
+import main.java.com.example.bolsadevaloresjavafx.estruturadados.DynamicArray;
 
 public class Custodiante {
 
